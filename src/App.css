@@ -1,38 +1,151 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #dff6ff, #ffffff);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  padding-right: 100px;
+  min-height: 100vh;
+  background-image: url("./TODO-APPimg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(0.5px) ;
+}
+
+.box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 400px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: 'playfair display','georgia',serif;
+  color: #2b2520;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #919090;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background-color: rgba(255,255,255,0.9);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  color: #fdfbf7;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.add{
+  background: linear-gradient(13deg,#e5c07b 0%,#c49a45 100%);
+  box-shadow: 0px 4px 10px rgba(196,154,69,0.2);
+  
+}
+.clear{
+  background: linear-gradient(135deg,#d8988a 0%,#b56758 100%);
+  box-shadow: 0px 4px 10px rgba(181,103,88,0.2);
+ 
+}
+.edit{
+  background: linear-gradient(135deg,#d3c2a3 0%,#ab9878 100%);
+  font-size: 14px;
+  width:70px;
+  text-align: center;
+ 
+}
+.delete{
+  background: linear-gradient(135deg,#e0a396 0%,#c07869 100%);
+  font-size: 14px;
+  width:70px ;
+  text-align: center;
+  
+}
+button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-3px);
+}
+button:active{
+  transform: translateY(3px);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(248,249,250,0.6);
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+span {
+  flex: 1;
+  margin-left: 10px;
+  text-align: left;
+  font-size: 15px;
+  color: #333;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #a09a93;
+  font-weight: bold;
+  background-color: rgba(248,249,250,0.35);
+  border:1px  #ab9878;
+}
+
+
+input[type="checkbox"] {
+  appearance: none; /* Removes the ugly default browser checkbox style */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ab9878;
+  border-radius: 4px; 
+  background-color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transition: all 0.2s ease;
+}
+
+
+input[type="checkbox"]:hover {
+  border-color: #c49a45; 
+  background-color: rgba(245, 227, 215, 0.2);
+}
+
+
+input[type="checkbox"]:checked {
+  background-color: #768c71; 
+  border-color: #768c71;
+}
+
+
+input[type="checkbox"]:checked::after {
+  content: '✓';
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 13px;
+  font-weight: bold;
 }
